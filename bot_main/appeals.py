@@ -3,9 +3,6 @@ from bot_main import bot, ADMIN_CHAT_ID
 # Хранение данных пользователя
 user_data = {}
 
-# Хранение данных пользователя
-user_data = {}
-
 # Процесс сбора заявки
 def ask_name(message):
     bot.send_message(message.chat.id, "Чтобы мы могли связаться с вами, нам нужно узнать немного "
