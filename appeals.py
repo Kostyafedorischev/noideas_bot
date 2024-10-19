@@ -45,7 +45,7 @@ def complete_request(message):
 
     # Чтение существующих данных из файла leads.json
     if os.path.exists('leads.json'):
-        with open('leads.json', 'r', encoding='utf-8') as leads_file:
+        with open('bot_main/leads.json', 'r', encoding='utf-8') as leads_file:
             try:
                 leads_data = json.load(leads_file)
                 if not isinstance(leads_data, list):
@@ -59,7 +59,7 @@ def complete_request(message):
     leads_data.append(complete_dict)
 
     # Запись данных в файл
-    with open('leads.json', 'w', encoding='utf-8') as leads_file:
+    with open('bot_main/leads.json', 'w', encoding='utf-8') as leads_file:
         json.dump(leads_data, leads_file, ensure_ascii=False, indent=4)
 
     summary = (f"Спасибо за предоставленную информацию!\n\n"
